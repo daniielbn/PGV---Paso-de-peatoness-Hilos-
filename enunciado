@@ -1,0 +1,19 @@
+Examen Programación Servicios y Procesos
+Este examen está formado por una única parte práctica. Para hacer este examen se dispone de 2 horas y se puede utilizar el internet y otro tipo de material para el examen, pero no se permite hablar ni comunicarse con ningún otro estudiante.
+Se deberá entregar un proyecto en Java con tantos paquetes como ejercicios haya en el examen. En cada paquete se resolverán los supuestos planteados en cada ejercicio. Si hay un ejercicio en C, también hay que entregar el fichero .c asociado.
+No se permite hablar ni compartir información con otros alumnos, en cuyo caso la nota del examen será un cero (0) para todos los implicados.
+Resuelve estos ejercicios que se plantean a continuación:
+
+El ayuntamiento de Utebo está muy preocupado por la seguridad de sus ciudadanos. La educación vial está siendo un fracaso; cada vez hay más chavales en bici que no saben cuales son las normas, y eso genera un malestar general: hay más accidentes, los chicos van sin casco por la calle, las señoras se quejan… por ello, desde el ayuntamiento te piden que generes una simulación en Java sincronizando varias clases para representar las reglas a seguir cuando estamos por la calle con nuestra bici y vemos que van a pasar ciudadanos por un paso de cebra. Por ello te piden que implementes estas clases:
+Ciclista, el cual tendrá un nombre. El ciclista accederá a la carretera, siempre que no haya señoras pasando o señoras esperando a pasar. El ciclista tarda poco en pasar por el paso de cebra (entre 1 y 3 segundos). Más de un ciclista puede pasar por el paso de cebra, entre ellos no se esperan.
+Un ciclista lo que hace es, llegar al paso de cebra, esperar si hay señoras pasando, o señoras que quieran pasar, y luego pasar por el paso de cebra. Cuando salen echan un aviso por si hay señoras esperando.
+Senyora, la cual también tendrá un nombre. Las señoras van llegando al paso de cebra (tardan entre 3 y 6 segundos en llegar, son lentas) y ellas sí que van de una en una, se quedan esperando a que vayan pasando. Una señora está como mínimo 5 segundos, hasta 10 (son señoras de pueblo mayores).
+Lo que hacen las señoras es, llegar al paso de cebra y ponerse a esperar. Cuando es su turno, pasan lentamente, y avisan a la siguiente señora o a los ciclistas que hay esperando.
+PasoCebra, que será la clase compartida entre todos los ciclistas y las señoras. Es, en esta clase donde hay que implementar los métodos de sincronización especificados en el enunciado.
+Implementa esta simulación de dos formas:
+Usando los métodos wait(), notifyAll() y synchronized. (2p)
+Usando semáforos. (2p)
+Consideraciones:
+Crear un launcher con 10 ciclistas y 5 señoras. Poned nombres automáticos: Señora 1,Señora 2, Ciclista 4,  Ciclista 5…
+Antes de programar nada, paraos a pensar. ¿Cuántas secciones críticas hay?
+Para facilitar el desarrollo, cuando hagáis el ejercicio usando semáforos, cread un semáforo de 5 permisos. Los ciclistas pueden entrar más de uno a la vez, pero sólo una señora puede entrar.
